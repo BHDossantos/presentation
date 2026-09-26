@@ -1,0 +1,17 @@
+# deckgen batch examples/batch.yaml -o out/batch
+jobs:
+  - type: outline
+    input: energy-efficient-buildings.md
+    format: pptx,html,pdf
+  - type: outline
+    input: academic-talk.md
+    out: academic
+  - type: data
+    input: sales.csv
+    title: H1 Sales Report
+    theme: coastal
+  - type: generate          # uses Claude when ANTHROPIC_API_KEY is set, otherwise a skeleton
+    topic: Heat pump retrofit program for a mid-size city
+    style: business
+    slides: 10
+    audience: city council

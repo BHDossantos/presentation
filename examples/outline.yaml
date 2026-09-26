@@ -1,0 +1,23 @@
+# Full control: this is the same structure as a saved .deck.json.
+title: Quarterly Business Review
+subtitle: Q2 results and H2 plan
+author: Operations team
+theme: noir
+slides:
+  - layout: metrics
+    title: Q2 beat plan on every headline metric
+    metrics:
+      - {value: "$311K", label: Revenue}
+      - {value: "+18%", label: Growth vs Q1}
+      - {value: "436", label: New customers}
+  - layout: two_column
+    title: Growth came from new channels, churn stayed flat
+    left: {heading: Worked, bullets: [Partner referrals, Annual plans]}
+    right: {heading: Needs work, bullets: [Onboarding time, Support backlog]}
+  - layout: quote
+    title: Customer voice
+    quote: The new onboarding flow saved our team a week.
+    attribution: Customer, mid-market segment
+  - layout: conclusion
+    title: H2 plan doubles down on partners and onboarding
+    bullets: [Launch partner tier in July, Cut onboarding to 3 days, Hire two support leads]

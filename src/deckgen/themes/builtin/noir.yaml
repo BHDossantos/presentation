@@ -1,0 +1,16 @@
+name: noir
+description: Black and gold on cream, high-contrast executive look.
+font: Arial
+background: "FFFFFF"
+title_background: "000000"
+title_text: "BF9A4A"
+primary: "111111"
+accent: "BF9A4A"
+text: "111111"
+muted: "6B7280"
+chart_colors: ["111111", "BF9A4A", "9CA3AF", "E5D3A8"]
+highlight: "BF9A4A"
+title_size: 30
+body_size: 20
+min_body_size: 14
+title_rule: true

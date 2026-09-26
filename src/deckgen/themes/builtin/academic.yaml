@@ -1,0 +1,17 @@
+# Communication-first academic defaults (academic-pptx-skill): white slides, navy/blue, one sans font.
+name: academic
+description: White background, navy primary, mid-blue accent, 26pt action titles, 20pt body.
+font: Arial
+background: "FFFFFF"
+title_background: "1F4E79"
+title_text: "FFFFFF"
+primary: "1F4E79"
+accent: "2E75B6"
+text: "222222"
+muted: "6B7280"
+chart_colors: ["2E75B6", "9CA3AF", "1F4E79", "BFDBFE"]
+highlight: "C2410C"
+title_size: 26
+body_size: 20
+min_body_size: 20
+title_rule: false

@@ -1,0 +1,16 @@
+name: coastal
+description: Teal and deep teal with a coral highlight.
+font: Verdana
+background: "FFFFFF"
+title_background: "277884"
+title_text: "FFFFFF"
+primary: "277884"
+accent: "5EA8A7"
+text: "1F2937"
+muted: "6B7280"
+chart_colors: ["277884", "5EA8A7", "A7D3D2", "9CA3AF"]
+highlight: "FE4447"
+title_size: 28
+body_size: 18
+min_body_size: 14
+title_rule: true
