@@ -170,3 +170,17 @@ docs/preview/          rendered example decks
 make install && make lint && make test
 make preview        # rebuild the energy example + thumbnails
 ```
+
+### Rehearse with a speaker script
+
+Export notes separately from your slides, with their original slide numbers and titles:
+
+```bash
+deckgen export-notes out/my-deck.deck.json -o out/speaker-notes.txt
+deckgen export-notes examples/academic-talk.md --include-empty
+```
+
+Without `-o`, the UTF-8 text is printed to stdout for piping or copying. Empty notes are
+skipped unless `--include-empty` is supplied. Markdown, YAML and saved deck JSON are
+supported; no API key, browser or LibreOffice is required. Exporting from the final
+`.deck.json` keeps numbering aligned with the built deck after automatic slide splitting.

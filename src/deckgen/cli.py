@@ -9,6 +9,7 @@ import yaml
 
 from deckgen.ai import GenerationError, generate_deck, has_credentials, skeleton_deck
 from deckgen.models import Deck
+from deckgen.notes import speaker_notes
 from deckgen.parsers import load_data, load_outline
 from deckgen.pipeline import FORMATS, BuildResult, build
 from deckgen.qa import lint_deck
@@ -168,6 +169,29 @@ def thumbnails(pptx: Path = typer.Argument(..., exists=True), out: Path | None =
     images = pdf_to_images(pdf, out)
     sheet = contact_sheet(images, out / "contact-sheet.png", cols=cols)
     typer.echo(f"{len(images)} slide images in {out}; contact sheet: {sheet}")
+
+
+@app.command("export-notes")
+def export_notes(
+    path: Path = typer.Argument(..., exists=True, dir_okay=False, help="Outline or .deck.json"),
+    output: Path | None = typer.Option(None, "--output", "-o", help="Text file; omit to print to stdout"),
+    include_empty: bool = typer.Option(False, "--include-empty", help="Include slides without notes"),
+) -> None:
+    """Export a rehearsal script with slide numbers and titles, without an API or PDF tools."""
+    if output and output.resolve() == path.resolve():
+        raise typer.BadParameter("Output must differ from the input file.", param_hint="--output")
+    deck = Deck.from_json(path) if path.suffix.lower() == ".json" else load_outline(path)
+    text = speaker_notes(deck, include_empty=include_empty)
+    if output is None:
+        typer.echo(text, nl=False)
+        return
+    try:
+        output.parent.mkdir(parents=True, exist_ok=True)
+        output.write_text(text, encoding="utf-8")
+    except OSError as exc:
+        typer.secho(f"Cannot write notes: {exc}", fg=typer.colors.RED, err=True)
+        raise typer.Exit(1) from exc
+    typer.echo(f"Speaker notes -> {output}")
 
 
 @app.command()
