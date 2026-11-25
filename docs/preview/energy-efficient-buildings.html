@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Energy-Efficient Power Design for Buildings &amp; Homes</title>
+<style>
+:root{--bg:#FFFFFF;--tbg:#0F3D2E;--tt:#FFFFFF;--pri:#0F3D2E;
+--acc:#2E9E6B;--txt:#1F2937;--mut:#6B7280;--hl:#F2A900;--card:#E6F3ED;}
+*{box-sizing:border-box}html,body{margin:0;height:100%;background:#111;font-family:Arial,Arial,sans-serif}
+.deck{height:100%;display:flex;align-items:center;justify-content:center}
+.slide{display:none;position:relative;width:min(100vw,177.78vh);aspect-ratio:16/9;background:var(--bg);
+color:var(--txt);overflow:hidden;font-size:min(1.5vw,2.67vh);padding:4% 4.5% 5%}
+.slide.active{display:flex;flex-direction:column}
+.slide.dark{background:var(--tbg);color:var(--tt);justify-content:center}
+h1{font-size:2.074074074074074em;color:var(--pri);margin:0 0 .2em;line-height:1.15}
+.dark h1{color:var(--tt);font-size:3.2em}.dark .sub{color:var(--tt);opacity:.8;font-size:1.5em}
+.rule{width:4em;height:.3em;background:var(--acc);margin:.2em 0 .8em}
+.sub{color:var(--mut);font-size:1.1em;margin-bottom:.6em}.by{opacity:.65;margin-top:2em;font-size:1.1em}
+.body{flex:1;display:flex;gap:3%;min-height:0}.body>div{flex:1;min-width:0}
+ul,ol{margin:.2em 0;padding-left:1.3em;font-size:1.4814814814814814em;line-height:1.35}li{margin-bottom:.5em}
+li::marker{color:var(--acc)}.col h3{color:var(--acc);margin:.1em 0 .4em;font-size:1.5em}
+.chartwrap{flex:1.6!important}.chart{width:100%;height:auto;max-height:100%}
+.note{color:var(--hl);font-weight:700;font-size:1.15em;margin-bottom:.3em}
+table{border-collapse:collapse;width:100%;font-size:1.05em}th{background:var(--pri);color:var(--bg);text-align:left}
+th,td{padding:.45em .7em}tr:nth-child(even) td{background:var(--card)}td:not(:first-child),th:not(:first-child){text-align:right}
+.metrics{display:flex;gap:2.5%;margin-top:1em}.metric{flex:1;background:var(--card);border-top:.35em solid var(--acc);
+padding:1.2em .8em;text-align:center}.metric b{display:block;font-size:2.6em;white-space:nowrap;color:var(--pri)}.metric span{font-size:1.2em}
+blockquote{font-size:2.3em;font-style:italic;color:var(--pri);margin:auto 6%;border-left:.15em solid var(--acc);padding-left:.8em}
+.attr{color:var(--mut);margin:0 6% auto;font-size:1.3em;padding-left:1.2em}
+.cite{position:absolute;left:4.5%;bottom:3%;font-size:.85em;color:var(--mut)}
+.num{position:absolute;right:4.5%;bottom:3%;font-size:.85em;color:var(--mut)}
+.concl{border-left:.3em solid var(--acc);padding-left:1em}
+img{max-width:100%;max-height:100%;object-fit:contain}
+.help{position:fixed;bottom:8px;left:50%;transform:translateX(-50%);color:#888;font:12px sans-serif}
+@media print{body{background:none}.slide{display:flex!important;page-break-after:always;width:100vw}.help{display:none}}
+</style></head><body><div class="deck">
+
+<section class="slide dark" data-i="0">
+
+  <h1>Energy-Efficient Power Design for Buildings &amp; Homes</h1><div class="sub">Cut the load first, then power what&#39;s left with solar, storage and smart controls</div>
+  <div class="by">deckgen example deck</div>
+
+</section>
+<section class="slide" data-i="1">
+
+  <h1>Buildings are one of the biggest levers for cutting energy use</h1><div class="rule"></div>
+  
+  <div class="body">
+  
+    <div><ul><li>Buildings use roughly 30% of global final energy</li><li>Most of a home&#39;s energy goes to heating, cooling and hot water</li><li>Design choices lock in energy use for 50+ years</li><li>Efficiency plus on-site solar can bring homes close to net zero</li></ul></div>
+  
+  </div>
+  <div class="cite">IEA, Buildings tracking report (2023)</div>
+  <div class="num">2 / 13</div>
+
+</section>
+<section class="slide" data-i="2">
+
+  <h1>Heating and hot water drive most home energy use</h1><div class="rule"></div>
+  
+  <div class="body">
+  
+    <div class="chartwrap"><div class="note">Space heating alone is ~40% of home energy use</div>
+    <svg viewBox="0 0 760 420" class="chart" role="img"><path d="M197.6,210.0 L197.6,33.6 A176.4,176.4 0 0 1 282.6,364.6 Z" fill="#F2A900" stroke="#FFFFFF" stroke-width="2"/><rect x="418.00000000000006" y="26" width="16" height="16" fill="#F2A900"/><text x="442.00000000000006" y="40" fill="#1F2937" font-size="15">Space heating (42%)</text><path d="M197.6,210.0 L282.6,364.6 A176.4,176.4 0 0 1 85.2,345.9 Z" fill="#0F3D2E" stroke="#FFFFFF" stroke-width="2"/><rect x="418.00000000000006" y="60" width="16" height="16" fill="#0F3D2E"/><text x="442.00000000000006" y="74" fill="#1F2937" font-size="15">Water heating (19%)</text><path d="M197.6,210.0 L85.2,345.9 A176.4,176.4 0 0 1 29.8,264.5 Z" fill="#A7D7C0" stroke="#FFFFFF" stroke-width="2"/><rect x="418.00000000000006" y="94" width="16" height="16" fill="#A7D7C0"/><text x="442.00000000000006" y="108" fill="#1F2937" font-size="15">Air conditioning (9%)</text><path d="M197.6,210.0 L29.8,264.5 A176.4,176.4 0 0 1 197.6,33.6 Z" fill="#2E9E6B" stroke="#FFFFFF" stroke-width="2"/><rect x="418.00000000000006" y="128" width="16" height="16" fill="#2E9E6B"/><text x="442.00000000000006" y="142" fill="#1F2937" font-size="15">Appliances, lighting &amp; other (30%)</text></svg></div><div><ul><li>Fix heating demand first: insulation and airtightness</li><li>Hot water is next: heat pump water heaters</li></ul></div>
+  
+  </div>
+  <div class="cite">U.S. EIA, Residential Energy Consumption Survey 2020 (rounded)</div>
+  <div class="num">3 / 13</div>
+
+</section>
+<section class="slide" data-i="3">
+
+  <h1>Design in order: reduce, make efficient, then generate</h1><div class="rule"></div>
+  
+  <div class="body">
+  
+    <div class="col"><h3>1. Reduce the load</h3>
+    <ul><li>Orientation, shading, daylight</li><li>Insulation, airtight envelope, high-performance windows</li></ul></div><div class="col"><h3>2. Serve it efficiently, then generate</h3>
+    <ul><li>Heat pumps, heat-recovery ventilation, LED lighting</li><li>Rooftop solar PV, battery storage, smart controls</li></ul></div>
+  
+  </div>
+  
+  <div class="num">4 / 13</div>
+
+</section>
+<section class="slide" data-i="4">
+
+  <h1>A good envelope can cut heating demand by up to 90%</h1><div class="rule"></div>
+  
+  <div class="body">
+  
+    <div class="chartwrap"><div class="note">Passive House caps heating demand at 15 kWh/m²·yr</div>
+    <svg viewBox="0 0 760 420" class="chart" role="img"><rect x="170" y="43.0" width="510.0" height="60.5" fill="#8CCAAE" rx="2"/><text x="686.0" y="78.2" font-size="13" fill="#1F2937">200</text><text x="162" y="78.2" text-anchor="end" font-size="14" fill="#1F2937">Older uninsulated home</text><rect x="170" y="129.5" width="204.0" height="60.5" fill="#8CCAAE" rx="2"/><text x="380.0" y="164.8" font-size="13" fill="#1F2937">80</text><text x="162" y="164.8" text-anchor="end" font-size="14" fill="#1F2937">Typical code-built home</text><rect x="170" y="216.0" width="102.0" height="60.5" fill="#8CCAAE" rx="2"/><text x="278.0" y="251.2" font-size="13" fill="#1F2937">40</text><text x="162" y="251.2" text-anchor="end" font-size="14" fill="#1F2937">High-performance home</text><rect x="170" y="302.5" width="38.2" height="60.5" fill="#F2A900" rx="2"/><text x="214.2" y="337.8" font-size="13" fill="#1F2937">15</text><text x="162" y="337.8" text-anchor="end" font-size="14" fill="#1F2937">Passive House</text></svg></div><div><ul><li>Continuous insulation, no thermal bridges</li><li>Airtightness tested with a blower door</li><li>Triple-glazed or low-e windows</li></ul></div>
+  
+  </div>
+  <div class="cite">Passive House Institute criteria; other values are typical illustrative ranges</div>
+  <div class="num">5 / 13</div>
+
+</section>
+<section class="slide" data-i="5">
+
+  <h1>Efficient systems do more with less energy</h1><div class="rule"></div>
+  
+  <div class="body">
+  
+    <div><div class="metrics"><div class="metric"><b>300–400%</b><span>Heat pump efficiency (COP 3–4) vs ~95% for a gas furnace</span></div><div class="metric"><b>~75%</b><span>Less electricity for LED vs incandescent lighting</span></div><div class="metric"><b>20–23%</b><span>Typical efficiency of mainstream solar panels</span></div><div class="metric"><b>70–90%</b><span>Heat recovered by an HRV/ERV ventilation unit</span></div></div>
+    </div>
+  
+  </div>
+  <div class="cite">U.S. DOE Energy Saver; manufacturer datasheets (typical ranges)</div>
+  <div class="num">6 / 13</div>
+
+</section>
+<section class="slide" data-i="6">
+
+  <h1>Efficiency first shrinks the solar array by 40%</h1><div class="rule"></div>
+  
+  <div class="body">
+  
+    <div class="chartwrap"><div class="note">4.3 kWp ≈ 11 × 400 W panels ≈ 21 m² of roof</div>
+    <svg viewBox="0 0 760 420" class="chart" role="img"><rect x="74.0" y="30.0" width="252.0" height="346.0" fill="#8CCAAE" rx="2"/><text x="200.0" y="24.0" text-anchor="middle" font-size="13" fill="#1F2937">7.1</text><text x="200.0" y="406" text-anchor="middle" font-size="14" fill="#1F2937">Before upgrades</text><rect x="434.0" y="166.5" width="252.0" height="209.5" fill="#F2A900" rx="2"/><text x="560.0" y="160.5" text-anchor="middle" font-size="13" fill="#1F2937">4.3</text><text x="560.0" y="406" text-anchor="middle" font-size="14" fill="#1F2937">After upgrades</text></svg></div><div><ul><li>Load drops from 10,000 to 6,000 kWh/yr</li><li>Assumes a yield of 1,400 kWh per kWp per year</li><li>Smaller array: lower cost, fits more roofs</li></ul></div>
+  
+  </div>
+  
+  <div class="num">7 / 13</div>
+
+</section>
+<section class="slide" data-i="7">
+
+  <h1>Solar sizing worked example</h1><div class="rule"></div>
+  
+  <div class="body">
+  
+    <div><table><tr><th>Step</th><th>Value</th></tr>
+    <tr><td>Annual electricity use after upgrades</td><td>6,000 kWh</td></tr><tr><td>Specific yield (location dependent)</td><td>1,400 kWh/kWp</td></tr><tr><td>Required PV capacity</td><td>4.3 kWp</td></tr><tr><td>Panel rating</td><td>400 W</td></tr><tr><td>Number of panels</td><td>11</td></tr><tr><td>Roof area (≈1.9 m² per panel)</td><td>≈21 m²</td></tr><tr><td>Inverter size (≈0.9–1.0 × array)</td><td>4.0 kW</td></tr></table></div>
+  
+  </div>
+  
+  <div class="num">8 / 13</div>
+
+</section>
+<section class="slide" data-i="8">
+
+  <h1>Solar peaks at noon but homes peak at night, so storage bridges the gap</h1><div class="rule"></div>
+  
+  <div class="body">
+  
+    <div class="chartwrap"><div class="note">Illustrative summer day for a 4.3 kWp home</div>
+    <svg viewBox="0 0 760 420" class="chart" role="img"><polyline fill="none" stroke="#2E9E6B" stroke-width="3" points="20.0,351.6 164.0,172.2 308.0,50.0 452.0,131.5 596.0,310.8 740.0,376.0"/><circle cx="20.0" cy="351.6" r="4" fill="#2E9E6B"/><text x="20.0" y="339.6" text-anchor="middle" font-size="13" fill="#1F2937">0.3</text><circle cx="164.0" cy="172.2" r="4" fill="#2E9E6B"/><text x="164.0" y="160.2" text-anchor="middle" font-size="13" fill="#1F2937">2.5</text><circle cx="308.0" cy="50.0" r="4" fill="#2E9E6B"/><text x="308.0" y="38.0" text-anchor="middle" font-size="13" fill="#1F2937">4</text><circle cx="452.0" cy="131.5" r="4" fill="#2E9E6B"/><text x="452.0" y="119.5" text-anchor="middle" font-size="13" fill="#1F2937">3</text><circle cx="596.0" cy="310.8" r="4" fill="#2E9E6B"/><text x="596.0" y="298.8" text-anchor="middle" font-size="13" fill="#1F2937">0.8</text><circle cx="740.0" cy="376.0" r="4" fill="#2E9E6B"/><text x="740.0" y="364.0" text-anchor="middle" font-size="13" fill="#1F2937">0</text><polyline fill="none" stroke="#F2A900" stroke-width="3" points="20.0,310.8 164.0,327.1 308.0,335.2 452.0,318.9 596.0,196.7 740.0,229.3"/><circle cx="20.0" cy="310.8" r="4" fill="#F2A900"/><text x="20.0" y="298.8" text-anchor="middle" font-size="13" fill="#1F2937">0.8</text><circle cx="164.0" cy="327.1" r="4" fill="#F2A900"/><text x="164.0" y="315.1" text-anchor="middle" font-size="13" fill="#1F2937">0.6</text><circle cx="308.0" cy="335.2" r="4" fill="#F2A900"/><text x="308.0" y="323.2" text-anchor="middle" font-size="13" fill="#1F2937">0.5</text><circle cx="452.0" cy="318.9" r="4" fill="#F2A900"/><text x="452.0" y="306.9" text-anchor="middle" font-size="13" fill="#1F2937">0.7</text><circle cx="596.0" cy="196.7" r="4" fill="#F2A900"/><text x="596.0" y="184.7" text-anchor="middle" font-size="13" fill="#1F2937">2.2</text><circle cx="740.0" cy="229.3" r="4" fill="#F2A900"/><text x="740.0" y="217.3" text-anchor="middle" font-size="13" fill="#1F2937">1.8</text><text x="20.0" y="406" text-anchor="middle" font-size="14" fill="#1F2937">6:00</text><text x="164.0" y="406" text-anchor="middle" font-size="14" fill="#1F2937">9:00</text><text x="308.0" y="406" text-anchor="middle" font-size="14" fill="#1F2937">12:00</text><text x="452.0" y="406" text-anchor="middle" font-size="14" fill="#1F2937">15:00</text><text x="596.0" y="406" text-anchor="middle" font-size="14" fill="#1F2937">18:00</text><text x="740.0" y="406" text-anchor="middle" font-size="14" fill="#1F2937">21:00</text><rect x="20" y="4" width="14" height="14" fill="#2E9E6B"/><text x="40" y="16" font-size="14" fill="#1F2937">Solar generation (kW)</text><rect x="190" y="4" width="14" height="14" fill="#F2A900"/><text x="210" y="16" font-size="14" fill="#1F2937">Home demand (kW)</text></svg></div><div><ul><li>Battery stores midday surplus for evening use</li><li>Smart controls shift EV charging and hot water to solar hours</li></ul></div>
+  
+  </div>
+  
+  <div class="num">9 / 13</div>
+
+</section>
+<section class="slide" data-i="9">
+
+  <h1>Power system design: components that work together</h1><div class="rule"></div>
+  
+  <div class="body">
+  
+    <div class="col"><h3>Generation &amp; conversion</h3>
+    <ul><li>PV array with string or micro-inverters</li><li>Rapid shutdown and DC isolation per code</li><li>Grid-tie with net metering or export tariff</li></ul></div><div class="col"><h3>Storage &amp; control</h3>
+    <ul><li>Lithium iron phosphate (LFP) battery, 5–13 kWh typical</li><li>Smart panel / energy management system</li><li>EV charger and heat pump on managed circuits</li></ul></div>
+  
+  </div>
+  
+  <div class="num">10 / 13</div>
+
+</section>
+<section class="slide" data-i="10">
+
+  <h1>Homes vs commercial buildings: same principles, different priorities</h1><div class="rule"></div>
+  
+  <div class="body">
+  
+    <div class="col"><h3>Homes</h3>
+    <ul><li>Heating, cooling and hot water dominate</li><li>Rooftop PV can cover most annual use</li><li>Simple controls, big comfort gains</li></ul></div><div class="col"><h3>Commercial buildings</h3>
+    <ul><li>Lighting, cooling, plug loads and ventilation dominate</li><li>Building automation and metering are critical</li><li>Roof area often limits PV; add façades and carports</li></ul></div>
+  
+  </div>
+  
+  <div class="num">11 / 13</div>
+
+</section>
+<section class="slide" data-i="11">
+
+  <h1>A phased roadmap turns any building into a low-energy building</h1><div class="rule"></div>
+  
+  <div class="body">
+  
+    <div><ul><li>Audit: energy bills, blower-door test, thermal imaging</li><li>Envelope: air sealing, insulation, windows</li><li>Systems: heat pump, heat pump water heater, HRV, LEDs</li><li>Generate: right-sized rooftop solar PV</li><li>Store &amp; manage: battery, smart controls, EV charging</li><li>Monitor: track kWh and tune settings every season</li></ul></div>
+  
+  </div>
+  
+  <div class="num">12 / 13</div>
+
+</section>
+<section class="slide" data-i="12">
+
+  <h1>Reduce first, then generate: the path to a net-zero-ready building</h1><div class="rule"></div>
+  
+  <div class="body">
+  
+    <div class="concl"><ol >
+    <li>Efficiency is the cheapest kWh: fix the envelope and systems first</li><li>Heat pumps and LEDs cut energy use 3–4× for heating and lighting</li><li>A right-sized solar + battery system covers the remaining load</li><li>Smart controls match demand to solar output and cut bills further</li></ol></div>
+  
+  </div>
+  
+  <div class="num">13 / 13</div>
+
+</section>
+</div><div class="help">← → / click to navigate · F fullscreen</div>
+<script>
+const S=[...document.querySelectorAll('.slide')];let i=Math.max(0,Math.min(S.length-1,parseInt(location.hash.slice(1)||'1')-1));
+function go(n){S[i].classList.remove('active');i=Math.max(0,Math.min(S.length-1,n));S[i].classList.add('active');history.replaceState(null,'','#'+(i+1));}
+go(i);addEventListener('hashchange',()=>{const n=parseInt(location.hash.slice(1))-1;if(n!==i&&n>=0)go(n);});
+document.addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key))go(i+1);
+if(['ArrowLeft','PageUp'].includes(e.key))go(i-1);if(e.key==='Home')go(0);if(e.key==='End')go(S.length-1);
+if(e.key==='f')document.documentElement.requestFullscreen?.();});
+document.addEventListener('click',e=>go(e.clientX>innerWidth/3?i+1:i-1));
+</script></body></html>

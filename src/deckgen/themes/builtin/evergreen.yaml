@@ -1,0 +1,16 @@
+name: evergreen
+description: Deep forest green with leaf-green accents and a solar-amber highlight (energy, sustainability).
+font: Arial
+background: "FFFFFF"
+title_background: "0F3D2E"
+title_text: "FFFFFF"
+primary: "0F3D2E"
+accent: "2E9E6B"
+text: "1F2937"
+muted: "6B7280"
+chart_colors: ["2E9E6B", "F2A900", "0F3D2E", "A7D7C0"]
+highlight: "F2A900"
+title_size: 28
+body_size: 20
+min_body_size: 14
+title_rule: true

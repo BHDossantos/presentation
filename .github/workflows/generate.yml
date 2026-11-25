@@ -1,0 +1,50 @@
+name: Generate deck
+
+# Run from the Actions tab: type a topic, get PPTX / HTML / PDF back as a downloadable artifact.
+# Add an ANTHROPIC_API_KEY repository secret for AI-written decks; without it you get an editable skeleton.
+on:
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: What the presentation is about
+        required: true
+      style:
+        description: business or academic
+        default: business
+      slides:
+        description: Approximate number of slides
+        default: "10"
+      theme:
+        description: "Theme: academic, coastal, corporate, evergreen, midnight, noir, terracotta"
+        default: corporate
+      audience:
+        description: Who the deck is for (optional)
+        default: ""
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: sudo apt-get update && sudo apt-get install -y --no-install-recommends libreoffice-impress
+      - run: pip install -e ".[qa]"
+      - name: Generate
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TOPIC: ${{ inputs.topic }}
+          STYLE: ${{ inputs.style }}
+          SLIDES: ${{ inputs.slides }}
+          THEME: ${{ inputs.theme }}
+          AUDIENCE: ${{ inputs.audience }}
+        run: |
+          args=(generate "$TOPIC" --style "$STYLE" --slides "$SLIDES" --theme "$THEME" -f pptx,html,pdf,json -o out)
+          if [ -n "$AUDIENCE" ]; then args+=(--audience "$AUDIENCE"); fi
+          deckgen "${args[@]}"
+          for f in out/*.pptx; do deckgen thumbnails "$f" -o "out/thumbs"; done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: deck
+          path: out/

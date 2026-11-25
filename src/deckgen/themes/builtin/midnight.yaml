@@ -1,0 +1,16 @@
+name: midnight
+description: Dark slides with emerald and violet accents.
+font: Trebuchet MS
+background: "181B24"
+title_background: "0F1117"
+title_text: "FFFFFF"
+primary: "FFFFFF"
+accent: "40C99A"
+text: "E5E7EB"
+muted: "9CA3AF"
+chart_colors: ["40C99A", "B165FB", "60A5FA", "F472B6"]
+highlight: "FBBF24"
+title_size: 30
+body_size: 20
+min_body_size: 14
+title_rule: true

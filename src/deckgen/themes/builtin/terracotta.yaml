@@ -1,0 +1,16 @@
+name: terracotta
+description: Warm cream with sage and terracotta, charcoal type.
+font: Georgia
+background: "F4F1DE"
+title_background: "2C2C2C"
+title_text: "F4F1DE"
+primary: "2C2C2C"
+accent: "87A96B"
+text: "2C2C2C"
+muted: "6B6B6B"
+chart_colors: ["87A96B", "2C2C2C", "C9D6B8", "A8A29E"]
+highlight: "E07A5F"
+title_size: 30
+body_size: 20
+min_body_size: 14
+title_rule: true
